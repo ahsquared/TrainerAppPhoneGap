@@ -1,0 +1,1006 @@
+@import url(custom.css);
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* 
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling. 
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ *
+ * Detailed information about this CSS: h5bp.com/css
+ * 
+ * ==|== normalize ==========================================================
+ */
+/* =============================================================================
+   Load Fonts
+   ========================================================================== */
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/* line 19, _reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+  display: block;
+}
+
+/* line 22, _reset.scss */
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/* line 27, _reset.scss */
+audio:not([controls]) {
+  display: none;
+}
+
+/* line 30, _reset.scss */
+[hidden] {
+  display: none;
+}
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ * 2. Force vertical scrollbar in non-IE
+ * 3. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+ */
+/* line 41, _reset.scss */
+html {
+  font-size: 100%;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 47, _reset.scss */
+body {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.331;
+}
+
+/* line 52, _reset.scss */
+body, button, input, select, textarea {
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  color: #003c77;
+}
+
+/* 
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate
+ */
+/* line 60, _reset.scss */
+::-moz-selection {
+  background: #003c77;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* line 65, _reset.scss */
+::selection {
+  background: #d4a853;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+/* line 73, _reset.scss */
+a {
+  text-decoration: none;
+  outline: 0 none;
+}
+
+/* line 83, _reset.scss */
+a:focus {
+  outline: 0 none;
+}
+
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+/* line 87, _reset.scss */
+a:hover, a:active {
+  outline: 0;
+}
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+/* line 93, _reset.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 96, _reset.scss */
+b, strong {
+  font-weight: bold;
+}
+
+/* line 99, _reset.scss */
+blockquote {
+  margin: 1em 40px;
+}
+
+/* line 102, _reset.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 105, _reset.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 113, _reset.scss */
+ins {
+  background: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 118, _reset.scss */
+mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Redeclare monospace font family: h5bp.com/j */
+/* line 125, _reset.scss */
+pre, code, kbd, samp {
+  font-family: monospace, monospace;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+
+/* Improve readability of pre-formatted text in all browsers */
+/* line 131, _reset.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* line 136, _reset.scss */
+q {
+  quotes: none;
+}
+
+/* line 139, _reset.scss */
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* line 143, _reset.scss */
+small {
+  font-size: 85%;
+}
+
+/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+/* line 147, _reset.scss */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 153, _reset.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 156, _reset.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 159, _reset.scss */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1em;
+  margin: 0;
+}
+
+/* line 163, _reset.scss */
+p {
+  margin: 10px 0;
+}
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+/* line 169, _reset.scss */
+ul, ol {
+  margin: 1em 0;
+  padding: 0 0 0 15px;
+}
+
+/* line 173, _reset.scss */
+dd {
+  margin: 0 0 0 40px;
+}
+
+/* line 176, _reset.scss */
+nav ul, nav ol {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Improve image quality when scaled in IE7: h5bp.com/d
+ * 2. Remove the gap between images and borders on image containers: h5bp.com/e 
+ */
+/* line 189, _reset.scss */
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+}
+
+/*
+ * Correct overflow not hidden in IE9 
+ */
+/* line 197, _reset.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+/* line 203, _reset.scss */
+figure {
+  margin: 0;
+}
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+/* line 209, _reset.scss */
+form {
+  margin: 0;
+}
+
+/* line 212, _reset.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Indicate that 'label' will shift focus to the associated form element */
+/* line 218, _reset.scss */
+label {
+  cursor: pointer;
+}
+
+/* 
+ * 1. Correct color not inheriting in IE6/7/8/9 
+ * 2. Correct alignment displayed oddly in IE6/7 
+ */
+/* line 225, _reset.scss */
+legend {
+  border: 0;
+  *margin-left: -7px;
+  padding: 0;
+}
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+/* line 235, _reset.scss */
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ * 2. Correct inner spacing displayed oddly in IE6/7
+ */
+/* line 245, _reset.scss */
+button, input {
+  line-height: normal;
+  *overflow: visible;
+}
+
+/*
+ * Reintroduce inner spacing in 'table' to avoid overlap and whitespace issues in IE6/7
+ */
+/* line 252, _reset.scss */
+table button, table input {
+  *overflow: auto;
+}
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ */
+/* line 259, _reset.scss */
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+/*
+ * Consistent box sizing and appearance
+ */
+/* line 266, _reset.scss */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+}
+
+/* line 269, _reset.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 275, _reset.scss */
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* 
+ * Remove inner padding and border in FF3/4: h5bp.com/l 
+ */
+/* line 281, _reset.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* 
+ * 1. Remove default vertical scrollbar in IE6/7/8/9 
+ * 2. Allow only vertical resizing
+ */
+/* line 289, _reset.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+/* Colors for form validity */
+/* line 295, _reset.scss */
+input:invalid, textarea:invalid {
+  background-color: #f0dddd;
+}
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+/* line 301, _reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 305, _reset.scss */
+td {
+  vertical-align: top;
+}
+
+/* =============================================================================
+	Import custom css generated by CMS
+   ==========================================================================*/
+/* =============================================================================
+	Fonts
+   ========================================================================== 
+
+@font-face {
+    font-family: 'NeoTechBold';
+    src: url('am285___-webfont.eot');
+    src: url('am285___-webfont.eot?#iefix') format('embedded-opentype'),
+         url('am285___-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NeoTechMedium';
+    src: url('am281___-webfont.eot');
+    src: url('am281___-webfont.eot?#iefix') format('embedded-opentype'),
+         url('am281___-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NeoTechRegular';
+    src: url('am277___-webfont.eot');
+    src: url('am277___-webfont.eot?#iefix') format('embedded-opentype'),
+         url('am277___-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}*/
+/* =============================================================================
+	Mixins, variables and extends
+   ========================================================================== */
+/* =============================================================================
+   Links
+   ========================================================================== */
+/* line 64, screen.scss */
+a {
+  color: white;
+  text-decoration: none;
+  outline: 0 none;
+}
+
+/* line 69, screen.scss */
+a:visited {
+  color: white;
+}
+
+/* line 72, screen.scss */
+a:hover {
+  color: white;
+}
+
+/* line 75, screen.scss */
+a:focus {
+  outline: 0 none;
+}
+
+/* =============================================================================
+	Primary Styles
+	Author: Andre Hayter
+   ========================================================================== */
+/* apply box-sizing to everything */
+/* line 87, screen.scss */
+*,
+:before,
+:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 92, screen.scss */
+body {
+  font-family: "NeoTechMedium", Verdana, sans-serif;
+  background: #5a5a64;
+  font-size: 20px;
+}
+
+/* line 97, screen.scss */
+#wrap {
+  position: relative;
+  width: 640px;
+  min-height: 960px;
+}
+
+/* line 103, screen.scss */
+#container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 640px;
+  min-height: 960px;
+}
+
+/* line 110, screen.scss */
+h1 {
+  font-size: 1.5em;
+}
+
+/* line 113, screen.scss */
+h2 {
+  font-size: .9em;
+}
+
+/* line 118, screen.scss */
+#splash {
+  cursor: pointer;
+  padding-top: 380px;
+}
+/* line 121, screen.scss */
+#splash #logo {
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 126, screen.scss */
+#version {
+  text-shadow: 0px -1px 0px black;
+  margin-top: 390px;
+  text-align: center;
+}
+
+/* line 131, screen.scss */
+.view {
+  left: 60px;
+  opacity: 0;
+  position: relative;
+}
+
+/* line 137, screen.scss */
+#main-nav {
+  -webkit-transition-property: height;
+  -moz-transition-property: height;
+  -o-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.5);
+  background: #333;
+  opacity: 0;
+  height: 0;
+  width: 640px;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  bottom: 0;
+}
+/* line 150, screen.scss */
+#main-nav.active {
+  opacity: 1;
+  height: 96px;
+}
+/* line 154, screen.scss */
+#main-nav li {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+/* line 158, screen.scss */
+#main-nav li.active {
+  background: #fff;
+}
+/* line 160, screen.scss */
+#main-nav li.active a {
+  color: #6e6e78;
+}
+/* line 164, screen.scss */
+#main-nav li a {
+  display: block;
+  height: 96px;
+  line-height: 96px;
+}
+
+/* line 172, screen.scss */
+#home {
+  padding: 20px;
+}
+/* line 177, screen.scss */
+#home .banner,
+#home .locator,
+#home .about,
+#home .best-sellers {
+  position: relative;
+  float: left;
+  margin: 20px 0 0 0;
+}
+/* line 181, screen.scss */
+#home .banner .label,
+#home .locator .label,
+#home .about .label,
+#home .best-sellers .label {
+  text-shadow: 0px -2px 2px black;
+  position: absolute;
+  right: 0;
+  top: 25px;
+  padding: 30px 35px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+/* line 191, screen.scss */
+#home .banner {
+  margin-top: 0;
+}
+/* line 195, screen.scss */
+#home .locator .label {
+  padding: 25px 20px;
+  right: auto;
+  left: 0;
+  top: 120px;
+}
+/* line 202, screen.scss */
+#home .about {
+  margin-left: 0;
+}
+/* line 204, screen.scss */
+#home .about .label {
+  top: 15px;
+  padding: 15px 20px;
+}
+/* line 210, screen.scss */
+#home .best-sellers .label {
+  top: 110px;
+  right: auto;
+  left: 0;
+}
+/* line 214, screen.scss */
+#home .best-sellers .label h2 {
+  font-size: 1em;
+}
+
+/* line 221, screen.scss */
+.product-summary {
+  background: #fff;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+/* line 225, screen.scss */
+.product-summary dl {
+  margin: 0;
+}
+/* line 227, screen.scss */
+.product-summary dl dt, .product-summary dl dd {
+  display: inline;
+}
+
+/* tabs */
+/* line 235, screen.scss */
+.tabs {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: outside none;
+}
+/* line 240, screen.scss */
+.tabs li {
+  float: left;
+  color: white;
+  cursor: pointer;
+  margin: 0 0 0 5px;
+  padding: 10px 10px 20px 10px;
+}
+/* line 246, screen.scss */
+.tabs li:first-child {
+  margin-left: 0;
+}
+/* line 249, screen.scss */
+.tabs li.active {
+  background: #fff;
+  color: #6e6e78;
+}
+
+/* line 256, screen.scss */
+.panes .pane {
+  display: none;
+}
+/* line 258, screen.scss */
+.panes .pane.active {
+  display: block;
+}
+
+/* =============================================================================
+   Additional UI
+   ========================================================================== */
+/* overlays */
+/* line 9, _additional_ui.scss */
+.overlay {
+  display: none;
+  z-index: 10000;
+  width: 600px;
+  height: 660px;
+  padding: 18px;
+  display: none;
+}
+
+/* line 18, _additional_ui.scss */
+.overlay .close {
+  cursor: pointer;
+  height: 26px;
+  width: 27px;
+  position: absolute;
+  right: 10px;
+  text-decoration: underline;
+  top: 20px;
+  background: url(/Content/img/overlay-close.gif) no-repeat top left;
+}
+
+/* select box style for dropdown replacment */
+/* line 30, _additional_ui.scss */
+.select_wrapper {
+  position: relative;
+  float: left;
+}
+
+/* line 34, _additional_ui.scss */
+.selectbox {
+  background: #3b3b82 url(/Content/img/) no-repeat scroll right center;
+  border: 1px solid #9393ba;
+  color: #9090c4;
+  cursor: pointer;
+  overflow: hidden;
+  text-align: left;
+  text-decoration: none;
+  height: 34px;
+  width: 158px;
+  padding: 0 30px 0 10px;
+  float: left;
+  line-height: 34px;
+  outline: none;
+  font-size: 12px;
+}
+
+/* line 51, _additional_ui.scss */
+.disabled .selectbox {
+  cursor: default;
+  color: #ccc;
+  border: 1px solid #444;
+}
+
+/* line 56, _additional_ui.scss */
+.dd_wrapper {
+  font-size: 14px;
+  position: absolute;
+  background: #2c2c78;
+  border: 1px solid #565693;
+  top: 37px;
+}
+
+/* line 63, _additional_ui.scss */
+.dd_wrapper_top, .dd_wrapper_bottom {
+  height: 1px;
+  background: #2c2c78;
+  border-left: 1px solid #565693;
+  border-right: 1px solid #565693;
+  border-top: 1px solid #565693;
+  position: absolute;
+}
+
+/* line 72, _additional_ui.scss */
+.dd_list_container {
+  overflow: auto;
+}
+
+/* line 75, _additional_ui.scss */
+.dd_wrapper_bottom {
+  border-bottom: 1px solid #00a9e0;
+  border-top: none;
+}
+
+/* line 79, _additional_ui.scss */
+.dd_list_container ul {
+  padding: 0px 0 0 5px;
+  list-style: none inside;
+  margin: 0;
+  color: #fff;
+}
+
+/* line 85, _additional_ui.scss */
+#content .dd_list_container ul li {
+  padding: 6px 7px;
+  font-size: 12px;
+  line-height: 1.2em;
+  cursor: pointer;
+}
+
+/* line 91, _additional_ui.scss */
+.dd_list_container .dd_current {
+  background: #3b3b82;
+}
+
+/* line 94, _additional_ui.scss */
+.dd_list_container .dd_selected {
+  background: #3b3b82;
+}
+
+/* ==|== non-semantic helper classes ========================================
+   Please define your styles before this section.
+   ========================================================================== */
+/* For image replacement */
+/* line 5, _helper.scss */
+.ir {
+  display: block;
+  border: 0;
+  text-indent: -999em;
+  overflow: hidden;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+}
+
+/* line 15, _helper.scss */
+.ir br {
+  display: none;
+}
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+/* line 19, _helper.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+/* line 24, _helper.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+/* line 35, _helper.scss */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* Hide visually and from screenreaders, but maintain layout */
+/* line 44, _helper.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* Contain floats: h5bp.com/q */
+/* line 48, _helper.scss */
+.cf {
+  zoom: 1;
+}
+
+/* line 50, _helper.scss */
+.cf:before {
+  content: "";
+  display: table;
+}
+
+/* line 53, _helper.scss */
+.cf:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 58, _helper.scss */
+.clear {
+  clear: both;
+}
+
+/* line 61, _helper.scss */
+.floatleft {
+  float: left;
+}
+
+/* line 64, _helper.scss */
+.floatright {
+  float: right;
+}
+
+/* line 67, _helper.scss */
+.left {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* line 72, _helper.scss */
+.right {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* line 77, _helper.scss */
+.spacer-top {
+  margin-top: 15px;
+}
+
+/* ==|== media queries ======================================================
+   PLACEHOLDER Media Queries for Responsive Design.
+   These override the primary ('mobile first') styles
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 480px) {
+  /* Style adjustments for viewports 480px and over go here */
+}
+@media only screen and (min-width: 768px) {
+  /* Style adjustments for viewports 768px and over go here */
+}
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* ==|== print styles =======================================================
+  Print styles.
+  Inlined to avoid required HTTP connection: h5bp.com/r
+  ========================================================================== */
+@media print {
+  /* line 10, _print.scss */
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  /* Black prints faster: h5bp.com/s */
+  /* line 18, _print.scss */
+  a, a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 21, _print.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 24, _print.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* line 27, _print.scss */
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+  }
+
+  /* Don't show links for images, or javascript/internal links */
+  /* line 31, _print.scss */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 35, _print.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* h5bp.com/t */
+  /* line 39, _print.scss */
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  /* line 42, _print.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 48, _print.scss */
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 52, _print.scss */
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}

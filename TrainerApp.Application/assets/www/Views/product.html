@@ -1,0 +1,58 @@
+﻿<section id="product" class="cf">
+    <header>
+        <div class="images">
+            <img class="thumb" />
+            <div class="image-list">
+            </div>
+        </div>
+        <div class="product-info">
+            <h2>{{ currentProduct.name }}</h2>
+            <h3>{{ currentProduct.categoryName }}</h3>
+            <dl>
+                <dt>Model:</dt>
+                <dd>{{ currentProduct.model }}</dd>
+                <dt>Fineline number:</dt>
+                <dd>{{currentProduct.finelineNumber }}</dd>
+                <dt>RRP:</dt>
+                <dd>${{currentProduct.rrp}}</dd>
+            </dl>
+        </div>
+    </header>
+    <ul class="tabs cf">
+        <li class="active" show-tab="0">Features</li>
+        <li show-tab="1">Specifications</li>
+        <li show-tab="2">Accessories</li>
+    </ul>
+    <div class="panes">
+        <div class="pane active">
+            {{ currentProduct.features }}
+        </div>
+        <div class="pane">
+            <table>
+                <tbody>
+                    <tr data-ng-repeat="spec in currentProduct.specs">
+                        <td>{{ spec.specName }}</td>
+                        <td>{{ spec.specData }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pane">
+            <div class="product-summary" ng-repeat="accessory in accessories" navigate="/product/{{accessory.id}}">
+                <img />
+                <div class="info">
+                    <h2>{{ accessory.name }}</h2>
+                    <h3>{{ accessory.categoryName }}</h3>
+                    <dl>
+                        <dt>Model:</dt>
+                        <dd>{{ accessory.model }}</dd>
+                        <dt>Fineline number:</dt>
+                        <dd>{{accessory.finelineNumber }}</dd>
+                        <dt>RRP:</dt>
+                        <dd>${{accessory.rrp}}</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

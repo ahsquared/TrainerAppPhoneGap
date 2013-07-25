@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+	<html ng-app="trainerApp" ng-controller="AppInit"> 
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="640">
+    	<meta name="viewport" content="width=640">
+		<meta http-equiv="cleartype" content="on">
+
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
+		<link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
+
+		<!-- Tile icon for Win8 (144x144 + tile color) -->
+		<meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
+		<meta name="msapplication-TileColor" content="#222222">
+
+		<link rel="stylesheet" href="Assets/sass/screen.css">
+	</head>
+	<body>
+
+		<!-- Add your site or application content here -->
+		
+		<div id="wrap">
+			<div id="container">
+				<header id="top-header" class="cf">
+				</header>
+			    <div class="error">{{ error }}</div>
+                <div animated-view id="main"></div>
+			    
+			    <div id="main-nav" ng-controller="NavbarController" data-ng-class="{'active': getStatus()}">
+				    <nav>
+				        <ul>
+				            <li data-ng-class="{'active': getClass('/home')}"><a class="light-text" href="#/home">Home</a></li>
+				            <li data-ng-class="{'active': getClass('/products')}"><a class="light-text" href="#/products">Products</a></li>
+				            <li data-ng-class="{'active': getClass('/training')}"><a class="light-text" href="#/training">Training</a></li>
+				            <li data-ng-class="{'active': getClass('/support')}"><a class="light-text" href="#/support">Support</a></li>
+				        </ul>
+				    </nav>
+			    </div>
+			</div>
+		</div>
+		
+		
+		<!-- js libs :: needs to be bundled -->
+		<script src="Assets/js/jquery-2.0.2.min.js"></script>
+		<script src="Assets/js/angular-1.1.5.min.js"></script>
+		<script src="Assets/js/as.utils.js"></script>
+	    <script src="Assets/js/app.js"></script>
+        <script src="Assets/js/controllers/controllers.js"></script>
+        <script src="Assets/js/services/dataService.js"></script>
+        <script src="Assets/js/directives/animatedView.js"></script>
+        <script src="Assets/js/directives/navigate.js"></script>
+	    <script src="Assets/js/directives/tabs.js"></script>
+	</body>
+</html>

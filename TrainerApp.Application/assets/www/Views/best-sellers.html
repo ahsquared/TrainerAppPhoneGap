@@ -1,0 +1,21 @@
+﻿<div id="best-sellers" class="cf">
+    <h1>
+        <img/>
+        <span class="light-text">Best Sellers</span>
+    </h1>
+    <div class="product-summary" ng-repeat="bestSeller in bestSellers" navigate="/product/{{bestSeller.id}}">
+        <img/>
+        <div class="info">
+            <h2>{{ bestSeller.name }}</h2>
+            <h3>{{ bestSeller.categoryName }}</h3>
+            <dl>
+                <dt>Model:</dt>
+                <dd>{{ bestSeller.model }}</dd>
+                <dt>Fineline number:</dt>
+                <dd>{{bestSeller.finelineNumber }}</dd>
+                <dt>RRP:</dt>
+                <dd>${{bestSeller.rrp}}</dd>
+            </dl>
+        </div>
+    </div>
+</div>
